@@ -1,21 +1,46 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import vite from "../assets/Images/vite.svg"
+import Model from "./Model"
+import { useState } from "react"
 
 function Header() {
+	const [isOpen, setIsOpen] = useState(false)
 	return (
 		<header className="flex justify-between  px-4 py-4 shadow-lg md:px-8 ">
-			<Link to="/">
+			<NavLink to="/">
 				<img src={vite} alt="" />
-			</Link>
+			</NavLink>
 			<ul className="flex  gap-4">
 				<li>
-					<Link to="/">Home</Link>
+					<NavLink
+						to="/"
+						className={({ isActive }) =>
+							isActive ? "text-blue-600 underline" : ""
+						}>
+						Home
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<NavLink
+						to="/about"
+						className={({ isActive }) =>
+							isActive ? "text-blue-600 underline" : ""
+						}>
+						About
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/contact">Contact</Link>
+					<NavLink
+						to="/contact"
+						className={({ isActive }) =>
+							isActive ? "text-blue-600 underline" : ""
+						}>
+						Contact
+					</NavLink>
+				</li>
+				<li>
+					<button onClick={() => setIsOpen(true)}>sign in</button>
+					<Model isOpen={isOpen} setIsOpen={setIsOpen} />
 				</li>
 			</ul>
 		</header>
