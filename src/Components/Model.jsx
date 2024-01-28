@@ -18,7 +18,7 @@ const Model = ({ isOpen, setIsOpen }) => {
 					className="align-center inline-block transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle"
 					role="dialog"
 					aria-modal="true"
-					aria-labelledby="modal-headline">
+					>
 					<div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
 						<label className="font-medium text-gray-800">Name</label>
 						<input
