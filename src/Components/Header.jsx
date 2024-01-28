@@ -6,7 +6,7 @@ import { useState } from "react"
 function Header() {
 	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<header className="flex justify-between  px-4 py-4 shadow-lg md:px-8 ">
+		<header className="mb-2 flex justify-between  px-4 py-4 shadow-lg md:px-8 ">
 			<NavLink to="/">
 				<img src={vite} alt="" />
 			</NavLink>
