@@ -7,7 +7,9 @@ import Home from "./pages/Home.jsx"
 // import About from "./pages/About.jsx"
 import { lazy } from "react"
 const About = lazy(() => import("./pages/About.jsx"))
-const Contact = lazy(() => import("./pages/Contact.jsx"))
+const Contact = lazy(() =>
+	import("./pages/Contact.jsx").then((module) => ({ default: module.Contact })),
+)
 
 const router = createBrowserRouter([
 	{
